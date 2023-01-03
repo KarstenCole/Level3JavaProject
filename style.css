@@ -1,0 +1,18 @@
+#Log,tr,th{
+    border-collapse: collapse;
+    border: solid black 1px;
+}
+tr:nth-child(even){
+    background-color: rgb(219, 219, 219);
+}
+#row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+p{
+    text-align: center;
+}
+h1{
+    text-align: center;
+}

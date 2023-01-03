@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body onload="initialize(1);">
+    <p id="directions">
+        Two players (human vs. computer) each have 2 piles of tokens (one pile of black and one pile of <br>
+        red). On a player’s turn (s)he will roll a black die and a red die and manipulate his or her or the <br>
+        opponent’s pile of tokens based on the dice rolls. The object of the game is to get rid of all of <br>
+        the black tokens and have the most red tokens. <br>
+    </p>
+    <div id="row">
+        <div id="wrapper">
+            <div id="Player-Display">
+                <h2>Player Display:</h2>
+                <p>
+                    <h3>Tokens:</h3> black: <span id="P-B"></span> <br> red: <span id="P-R"></span>
+                </p>
+                <p>
+                    <h3>Roll: <span id="Player-Roll"></span></h3> 
+                </p>
+                <button id="RollDice" onclick="RollDice('P');">RollDice</button> <br><br>
+                <button id="Add-R" onclick="MovePeices(1);">Add to your Red,<br> Remove from their Black</button>
+                <button id="Add-B" onclick="MovePeices(2);">Add to your Black,<br> Remove from their Red</button>
+                <button id="Rem-R" onclick="MovePeices(3);">Remove from your Red,<br> add to their Black</button>
+                <button id="Rem-B" onclick="MovePeices(4);">Remove from your Black,<br> add to their Red</button>
+
+            </div>
+            <div id="computer-Display">
+                <h2>Computer Display:</h2>
+                <p>
+                    <h3>Tokens:</h3> black: <span id="C-B"></span> <br> red: <span id="C-R"></span>        </p>
+                <p>
+                    <h3>Roll: <span id="Computer-Roll"></span></h3> 
+                </p>
+            </div>
+            <button onclick="reset();">Reset</button>
+        </div>
+        <table id="Log">
+            <tr>
+                <th>Player and Computer Selections <br> 
+                    (grey is player white is computer)</th>
+            </tr>
+        </table>
+    </div>
+    <h1>Winner: <span id="PreviousWinner"></span></h1>
+</body>
+</html>
